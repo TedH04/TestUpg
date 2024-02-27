@@ -1,0 +1,11 @@
+.audio-player {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    z-index: 1000;
+}
+
+.volume-slider {
+    width: 100px;
+    cursor: pointer;
+}

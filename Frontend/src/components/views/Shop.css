@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap');
+
+body, html {
+    height: 100%;
+    background-color: #f4e9d8;
+    font-family: 'MedievalSharp', 'Georgia', Times, 'Times New Roman', serif;
+}
+
+.game-container {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: space-around;
+    align-items: flex-start; 
+    background-color: rgba(244, 233, 216, 0.9);
+    min-height: 100vh; 
+    width: 100vw;
+    padding: 1vh;
+    border: 2px solid #8b4513;
+    border-radius: 10px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
+    overflow: auto; 
+}
+
+.hero-card, .shop-container {
+    border: 5px solid #8b4513;
+    padding: 2vh;
+    border-radius: 35px;
+    background-color: #e6d5b8;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out; 
+}
+
+.hero-card {
+    flex: 1 1 300px;
+    margin: 1vw; 
+}
+
+.shop-container {
+    flex: 2 1 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 1vh 1vw; 
+}
+
+button {
+    background-color: #8b4513;
+    color: #f4e9d8;
+    padding: 0.5rem 1rem;
+    border: 1px solid #3e3e3e;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out; 
+    font-family: 'MedievalSharp', 'Georgia', Times, 'Times New Roman', serif;
+    box-shadow: 2px 2px #3e3e3e;
+    text-shadow: 1px 1px #3e3e3e;
+}
+
+#buy-button {
+    margin-left: 5px;
+}
+
+#sell-button {
+    margin-left: 5px;
+}
+
+button:hover {
+    background-color: #6a2c0a;
+    transform: translateY(-2px);
+    box-shadow: 0 5px #403020;
+}
+
+@media (max-width: 768px) {
+    .game-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hero-card, .shop-container {
+        width: 90%; 
+        margin-bottom: 1rem; 
+        max-width: none; 
+    }
+}
+
+/* For even smaller screens */
+@media (max-width: 480px) {
+    .hero-card, .shop-container {
+        width: 95%;
+    }
+
+    button {
+        padding: 0.3rem 0.6rem;
+        font-size: 0.8rem;
+    }
+}
